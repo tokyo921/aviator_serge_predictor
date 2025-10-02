@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page de Serge - 1xBet</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
@@ -21,7 +21,7 @@
       color: white;
       padding: 15px 30px;
       margin: 10px;
-      font-size: 1.1em;
+      font-size: 1.2em;
       cursor: pointer;
       box-shadow: 0 0 20px rgba(255, 0, 100, 0.6);
       text-decoration: none;
@@ -43,15 +43,15 @@
     table {
       margin: 0 auto;
       border-collapse: collapse;
-      width: 92%;
+      width: 80%;
       margin-bottom: 40px;
       background: rgba(255,255,255,0.02);
       border-radius: 8px;
       overflow: hidden;
     }
     th, td {
-      padding: 14px;
-      border-bottom: 1px solid #2a2f3a;
+      padding: 12px;
+      border-bottom: 1px solid #444;
       font-size: 0.95em;
     }
     th {
@@ -61,17 +61,17 @@
       letter-spacing: 0.06em;
     }
     .comment {
-      background: rgba(17,28,43,0.9);
+      background: #111c2b;
       margin: 10px auto;
       padding: 15px;
-      border-radius: 12px;
-      max-width: 820px;
+      border-radius: 15px;
+      max-width: 700px;
       display: flex;
       align-items: center;
     }
     .comment img {
-      width: 64px;
-      height: 64px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       margin-right: 15px;
       object-fit: cover;
@@ -82,122 +82,102 @@
       margin-bottom: 5px;
     }
     #signal-display {
-      font-size: 1.3em;
+      font-size: 1.5em;
       color: #00ffcc;
       margin-top: 20px;
       min-height: 1.6em;
-    }
-    /* Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.78);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background: #111c2b;
-      padding: 22px;
-      border-radius: 12px;
-      max-width: 420px;
-      width: 92%;
-      text-align: center;
-    }
-    .modal input {
-      padding: 12px;
-      font-size: 1em;
-      width: 92%;
-      margin: 12px 0;
-      border-radius: 8px;
-      border: none;
-      text-align: center;
-      background: rgba(255,255,255,0.03);
-      color: white;
-    }
-    .note {
-      color: #f7c948;
-      margin-top: 10px;
-      font-size: 0.95em;
-    }
-    a.small {
-      display: inline-block;
-      margin-top: 8px;
-      font-size: 0.9em;
-      color: #cbd5ff;
-      text-decoration: none;
-    }
-    @media (max-width:600px){
-      .comment { flex-direction: row; gap:8px; }
-      .comment img { margin-right:10px; width:56px; height:56px; }
-      th, td { padding:10px; font-size:0.9em; }
     }
   </style>
 </head>
 <body>
   <div class="section">
-    <h1>🚀 Signaux Serge - Gagne avec 1xBet maintenant</h1>
+    <h1>🚀 Ton rôle n'est pas terminé — attends un signal puissant dans un instant !</h1>
 
     <!-- Contact Telegram -->
     <a class="button" href="https://t.me/Serge_Predictor_bot" target="_blank">✉️ Contacte Serge (@Serge_Predictor_bot)</a>
 
-    <!-- Inscription 1xBet -->
-    <a class="button" href="https://reffpa.com/L?tag=d_4807639m_97c__[]general[]_d173602_l224974_adaptive_banner&site=4807639&ad=97&r=registration" target="_blank">📝 Inscris-toi sur 1xBet</a>
+    <!-- Inscription 1xBet (lien fourni) -->
+    <a class="button" href="https://reffpa.com/L?tag=d_4807639m_97c__[]general[]_d173602_l224974_adaptive_banner&site=4807639&ad=97&r=registration" target="_blank">🎮 Inscris-toi sur 1xBet</a>
 
-    <!-- Signal button -->
-    <button class="button button-green" onclick="openModal()">✅ Obtenir un signal</button>
+    <!-- Bouton pour obtenir le signal -->
+    <button class="button button-green" onclick="getSignal()">✅ Obtenir le signal</button>
 
     <div id="signal-display"></div>
-    <div id="user-id" style="margin-top:10px; font-weight:bold; color:#bfeaf0;"></div>
   </div>
 
   <div class="section">
     <h2>Gagnants des tours précédents 🎉</h2>
     <table>
       <tr><th>Nom</th><th>Témoignage</th><th>Gains</th></tr>
-      <tr><td>André N.</td><td>Merci Serge, j'ai remboursé mes dettes et je vis mieux.</td><td>1 120 000 XAF</td></tr>
-      <tr><td>Marie T.</td><td>Je n'en reviens pas, maintenant je gagne tous les jours.</td><td>2 450 000 XAF</td></tr>
-      <tr><td>Paul E.</td><td>Serge a changé ma vie, je suis libre financièrement.</td><td>980 000 XAF</td></tr>
-      <tr><td>Fatou K.</td><td>Plus besoin de travailler à mi-temps, j'ai atteint l'indépendance.</td><td>1 760 500 XAF</td></tr>
+      <tr><td>Ardit H.</td><td>Merci Serge, j'ai remboursé mes dettes et je suis tranquille</td><td>912 350 XAF</td></tr>
+      <tr><td>Erion K.</td><td>Je n'y croyais pas au début, maintenant je gagne tous les jours</td><td>2 145 700 XAF</td></tr>
+      <tr><td>Alba L.</td><td>Serge a changé ma vie, maintenant je suis libre</td><td>1 805 600 XAF</td></tr>
+      <tr><td>Gentian M.</td><td>Je n'ai plus besoin de boulot à mi-temps, j'ai tout!</td><td>1 523 100 XAF</td></tr>
     </table>
   </div>
 
   <div class="section">
     <div class="comment">
-      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="avatar">
+      <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="avatar">
       <div class="comment-info" style="text-align:left;">
-        <span>Jean Mbeng</span>
-        <span>Serge m'a aidé à rembourser un prêt. Je suis reconnaissant !</span>
+        <span>Luan D.</span>
+        <span>Serge m'a aidé à rembourser mon prêt bancaire. Merci beaucoup !</span>
       </div>
     </div>
-
     <div class="comment">
-      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="avatar">
+      <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="avatar">
       <div class="comment-info" style="text-align:left;">
-        <span>Estelle N.</span>
-        <span>Au début j'étais sceptique, maintenant je gagne quotidiennement.</span>
+        <span>Erisa H.</span>
+        <span>Au début j'avais des doutes, maintenant je gagne des milliers XAF !</span>
       </div>
     </div>
-
     <div class="comment">
-      <img src="https://randomuser.me/api/portraits/men/82.jpg" alt="avatar">
+      <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="avatar">
       <div class="comment-info" style="text-align:left;">
-        <span>Eric T.</span>
-        <span>La meilleure décision que j'ai prise. Merci Serge ! ❤️</span>
+        <span>Albiona K.</span>
+        <span>Je vis désormais la liberté financière grâce à Serge ❤️</span>
+      </div>
+    </div>
+    <div class="comment">
+      <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="avatar">
+      <div class="comment-info" style="text-align:left;">
+        <span>Endri L.</span>
+        <span>Serge a complètement changé ma vie, merci !</span>
       </div>
     </div>
   </div>
 
-  <!-- Modal -->
-  <div id="idModal" class="modal">
-    <div class="modal-content">
-      <h2>Entrez votre identifiant 1xBet (10 chiffres)</h2>
-      <input type="text" id="accountId" maxlength="10" placeholder="XXXXXXXXXX" />
-      <p class="note">⚠️ Après validation, le logiciel se liera à votre compte automatiquement.</p>
-      <button class="button button-green" onclick="submitId()">Confirmer</button>
-      <p style="margin-top:10px; font-size:0.9em; color:#c7d2ff;">Ou contactez Serge via Telegram : <a class="small" href="https://t.me/Serge_Predictor_bot
+  <script>
+    let signalActive = false;
+
+    function getSignal() {
+      const display = document.getElementById('signal-display');
+
+      if (signalActive) {
+        display.textContent = '🎯 Le signal est en préparation, veuillez patienter...';
+        return;
+      }
+
+      signalActive = true;
+      let multiplier;
+      const random = Math.random();
+
+      if (random < 0.7) {
+        multiplier = (Math.random() * (1.45 - 1) + 1).toFixed(2);
+      } else if (random < 0.93) {
+        multiplier = (Math.random() * (5 - 1.8) + 1.8).toFixed(2);
+      } else if (random < 0.99) {
+        multiplier = (Math.random() * (70 - 15) + 15).toFixed(2);
+      } else {
+        multiplier = (Math.random() * (190 - 100) + 100).toFixed(2);
+      }
+
+      display.textContent = `🚀 Nouveau signal prêt : ×${multiplier}`;
+      setTimeout(() => {
+        signalActive = false;
+      }, 9000);
+    }
+  </script>
+</body>
+</html>
 
