@@ -12,7 +12,6 @@
       background: linear-gradient(to bottom, #060b1a, #000000);
       color: white;
       text-align: center;
-      direction: ltr;
     }
     .button {
       background: linear-gradient(45deg, #d4145a, #fbb03b);
@@ -45,20 +44,10 @@
       border-collapse: collapse;
       width: 80%;
       margin-bottom: 40px;
-      background: rgba(255,255,255,0.02);
-      border-radius: 8px;
-      overflow: hidden;
     }
     th, td {
       padding: 12px;
       border-bottom: 1px solid #444;
-      font-size: 0.95em;
-    }
-    th {
-      background: rgba(255,255,255,0.03);
-      text-transform: uppercase;
-      font-size: 0.9em;
-      letter-spacing: 0.06em;
     }
     .comment {
       background: #111c2b;
@@ -73,8 +62,7 @@
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      margin-right: 15px;
-      object-fit: cover;
+      margin-left: 15px;
     }
     .comment-info span:first-child {
       display: block;
@@ -85,64 +73,49 @@
       font-size: 1.5em;
       color: #00ffcc;
       margin-top: 20px;
-      min-height: 1.6em;
     }
   </style>
 </head>
 <body>
   <div class="section">
-    <h1>🚀 Ton rôle n'est pas terminé — attends un signal puissant dans un instant !</h1>
-
-    <!-- Contact Telegram -->
-    <a class="button" href="https://t.me/Serge_Predictor_bot" target="_blank">✉️ Contacte Serge (@Serge_Predictor_bot)</a>
-
-    <!-- Inscription 1xBet (lien fourni) -->
-    <a class="button" href="https://reffpa.com/L?tag=d_4807639m_97c__[]general[]_d173602_l224974_adaptive_banner&site=4807639&ad=97&r=registration" target="_blank">🎮 Inscris-toi sur 1xBet</a>
-
-    <!-- Bouton pour obtenir le signal -->
+    <h1>🚀 Votre rôle n’est pas terminé. Patientez pour un signal puissant !</h1>
+    <a class="button" href="https://t.me/Serge_Predictor_bot" target="_blank">✉️ Contactez Serge</a>
+    <a class="button" href="https://reffpa.com/L?tag=d_4807639m_97c__[]general[]_d173602_l224974_adaptive_banner&site=4807639&ad=97&r=registration" target="_blank">🎮 Inscrivez-vous sur 1xBet</a>
     <button class="button button-green" onclick="getSignal()">✅ Obtenir le signal</button>
-
     <div id="signal-display"></div>
   </div>
 
   <div class="section">
     <h2>Gagnants des tours précédents 🎉</h2>
     <table>
-      <tr><th>Nom</th><th>Témoignage</th><th>Gains</th></tr>
-      <tr><td>Ardit H.</td><td>Merci Serge, j'ai remboursé mes dettes et je suis tranquille</td><td>912 350 XAF</td></tr>
-      <tr><td>Erion K.</td><td>Je n'y croyais pas au début, maintenant je gagne tous les jours</td><td>2 145 700 XAF</td></tr>
-      <tr><td>Alba L.</td><td>Serge a changé ma vie, maintenant je suis libre</td><td>1 805 600 XAF</td></tr>
-      <tr><td>Gentian M.</td><td>Je n'ai plus besoin de boulot à mi-temps, j'ai tout!</td><td>1 523 100 XAF</td></tr>
+      <tr><th>Nom</th><th>Commentaire</th><th>Gains</th></tr>
+      <tr><td>Jean Dupont</td><td>Merci Serge, j'ai remboursé mes dettes et je suis tranquille</td><td>912,350 XAF</td></tr>
+      <tr><td>Marie Ngono</td><td>Au début je doutais, maintenant je gagne chaque jour</td><td>2,145,700 XAF</td></tr>
+      <tr><td>Pauline Tchoua</td><td>Serge a changé ma vie, maintenant je suis libre</td><td>1,805,600 XAF</td></tr>
+      <tr><td>Marc Essome</td><td>Je n’ai plus besoin de travailler, j’ai tout!</td><td>1,523,100 XAF</td></tr>
     </table>
   </div>
 
   <div class="section">
     <div class="comment">
-      <img src="https://randomuser.me/api/portraits/men/5.jpg" alt="avatar">
-      <div class="comment-info" style="text-align:left;">
-        <span>Luan D.</span>
-        <span>Serge m'a aidé à rembourser mon prêt bancaire. Merci beaucoup !</span>
+      <img src="https://randomuser.me/api/portraits/men/10.jpg" alt="avatar">
+      <div class="comment-info">
+        <span>Luc Mballa</span>
+        <span>Serge m'a aidé à rembourser mon crédit bancaire. Merci beaucoup !</span>
       </div>
     </div>
     <div class="comment">
-      <img src="https://randomuser.me/api/portraits/men/6.jpg" alt="avatar">
-      <div class="comment-info" style="text-align:left;">
-        <span>Erisa H.</span>
-        <span>Au début j'avais des doutes, maintenant je gagne des milliers XAF !</span>
+      <img src="https://randomuser.me/api/portraits/women/11.jpg" alt="avatar">
+      <div class="comment-info">
+        <span>Adèle Ngom</span>
+        <span>Au début je doutais, maintenant je gagne des milliers de XAF !</span>
       </div>
     </div>
     <div class="comment">
-      <img src="https://randomuser.me/api/portraits/women/7.jpg" alt="avatar">
-      <div class="comment-info" style="text-align:left;">
-        <span>Albiona K.</span>
-        <span>Je vis désormais la liberté financière grâce à Serge ❤️</span>
-      </div>
-    </div>
-    <div class="comment">
-      <img src="https://randomuser.me/api/portraits/men/8.jpg" alt="avatar">
-      <div class="comment-info" style="text-align:left;">
-        <span>Endri L.</span>
-        <span>Serge a complètement changé ma vie, merci !</span>
+      <img src="https://randomuser.me/api/portraits/men/12.jpg" alt="avatar">
+      <div class="comment-info">
+        <span>Emmanuel Tchoua</span>
+        <span>Maintenant je vis financièrement libre grâce à Serge ❤️</span>
       </div>
     </div>
   </div>
@@ -152,27 +125,23 @@
 
     function getSignal() {
       const display = document.getElementById('signal-display');
-
+      
       if (signalActive) {
         display.textContent = '🎯 Le signal est en préparation, veuillez patienter...';
         return;
       }
-
+      
       signalActive = true;
-      let multiplier;
-      const random = Math.random();
+      display.textContent = '⏳ Liaison du logiciel en cours avec votre compte...';
+      
+      setTimeout(() => {
+        display.textContent = '⚡ Préparation du signal en cours...';
+      }, 3000);
 
-      if (random < 0.7) {
-        multiplier = (Math.random() * (1.45 - 1) + 1).toFixed(2);
-      } else if (random < 0.93) {
-        multiplier = (Math.random() * (5 - 1.8) + 1.8).toFixed(2);
-      } else if (random < 0.99) {
-        multiplier = (Math.random() * (70 - 15) + 15).toFixed(2);
-      } else {
-        multiplier = (Math.random() * (190 - 100) + 100).toFixed(2);
-      }
+      setTimeout(() => {
+        display.textContent = '⚠️ Pour activer le logiciel, vous devez recharger votre compte 1xBet avec 1,500 XAF';
+      }, 6000);
 
-      display.textContent = `🚀 Nouveau signal prêt : ×${multiplier}`;
       setTimeout(() => {
         signalActive = false;
       }, 9000);
@@ -180,4 +149,5 @@
   </script>
 </body>
 </html>
+
 
