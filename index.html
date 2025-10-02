@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page de Serge - 1xBet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(to bottom, #060b1a, #000000);
+      color: white;
+      text-align: center;
+      direction: ltr;
+    }
+    .button {
+      background: linear-gradient(45deg, #d4145a, #fbb03b);
+      border: none;
+      border-radius: 20px;
+      color: white;
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 0, 100, 0.6);
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button-green {
+      background: linear-gradient(45deg, #0f0, #0c0);
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+      animation: pulse 1.5s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 10px #0f0; }
+      50% { box-shadow: 0 0 30px #0f0; }
+      100% { box-shadow: 0 0 10px #0f0; }
+    }
+    .section {
+      padding: 30px 20px;
+    }
+    table {
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 92%;
+      margin-bottom: 40px;
+      background: rgba(255,255,255,0.02);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 14px;
+      border-bottom: 1px solid #2a2f3a;
+      font-size: 0.95em;
+    }
+    th {
+      background: rgba(255,255,255,0.03);
+      text-transform: uppercase;
+      font-size: 0.9em;
+      letter-spacing: 0.06em;
+    }
+    .comment {
+      background: rgba(17,28,43,0.9);
+      margin: 10px auto;
+      padding: 15px;
+      border-radius: 12px;
+      max-width: 820px;
+      display: flex;
+      align-items: center;
+    }
+    .comment img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+    .comment-info span:first-child {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    #signal-display {
+      font-size: 1.3em;
+      color: #00ffcc;
+      margin-top: 20px;
+      min-height: 1.6em;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.78);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #111c2b;
+      padding: 22px;
+      border-radius: 12px;
+      max-width: 420px;
+      width: 92%;
+      text-align: center;
+    }
+    .modal input {
+      padding: 12px;
+      font-size: 1em;
+      width: 92%;
+      margin: 12px 0;
+      border-radius: 8px;
+      border: none;
+      text-align: center;
+      background: rgba(255,255,255,0.03);
+      color: white;
+    }
+    .note {
+      color: #f7c948;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+    a.small {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #cbd5ff;
+      text-decoration: none;
+    }
+    /* responsive */
+    @media (max-width:600px){
+      .comment { flex-direction: row; gap:8px; }
+      .comment img { margin-right:10px; width:56px; height:56px; }
+      th, td { padding:10px; font-size:0.9em; }
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <h1>🚀 Signaux Serge - Gagne avec 1xBet maintenant</h1>
+
+    <!-- Contact Telegram -->
+    <a class="button" href="https://t.me/Serge_Predictor_bot" target="_blank">✉️ Contacte Serge (@Serge_Predictor_bot)</a>
+
+    <!-- Inscription 1xBet -->
+    <a class="button" href="https://reffpa.com/L?tag=d_4807639m_97c__[]general[]_d173602_l224974_adaptive_banner&site=4807639&ad=97&r=registration" target="_blank">📝 Inscris-toi sur 1xBet</a>
+
+    <!-- Signal button -->
+    <button class="button button-green" onclick="openModal()">✅ Obtenir un signal</button>
+
+    <div id="signal-display"></div>
+    <div id="user-id" style="margin-top:10px; font-weight:bold; color:#bfeaf0;"></div>
+  </div>
+
+  <div class="section">
+    <h2>Gagnants des tours précédents 🎉</h2>
+    <table>
+      <tr><th>Nom</th><th>Témoignage</th><th>Gains</th></tr>
+      <tr><td>André N.</td><td>Merci Serge, j'ai remboursé mes dettes et je vis mieux.</td><td>1 120 000 XAF</td></tr>
+      <tr><td>Marie T.</td><td>Je n'en reviens pas, maintenant je gagne tous les jours.</td><td>2 450 000 XAF</td></tr>
+      <tr><td>Paul E.</td><td>Serge a changé ma vie, je suis libre financièrement.</td><td>980 000 XAF</td></tr>
+      <tr><td>Fatou K.</td><td>Plus besoin de travailler à mi-temps, j'ai atteint l'indépendance.</td><td>1 760 500 XAF</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="comment">
+      <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="avatar">
+      <div class="comment-info" style="text-align:left;">
+        <span>Jean Mbeng</span>
+        <span>Serge m'a aidé à rembourser un prêt. Je suis reconnaissant !</span>
+      </div>
+    </div>
+
+    <div class="comment">
+      <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="avatar">
+      <div class="comment-info" style="text-align:left;">
+        <span>Estelle N.</span>
+        <span>Au début j'étais sceptique, maintenant je gagne quotidiennement.</span>
+      </div>
+    </div>
+
+    <div class="comment">
+      <img src="https://randomuser.me/api/portraits/men/82.jpg" alt="avatar">
+      <div class="comment-info" style="text-align:left;">
+        <span>Eric T.</span>
+        <span>La meilleure décision que j'ai prise. Merci Serge ! ❤️</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="idModal" class="modal">
+    <div class="modal-content">
+      <h2>Entrez votre identifiant 1xBet (10 chiffres)</h2>
+      <input type="text" id="accountId" maxlength="10" placeholder="XXXXXXXXXX" />
+      <p class="note">⚠️ Après validation, vous devrez approvisionner votre compte avec <strong>1 500 XAF</strong> pour activer le service.</p>
+      <button class="button button-green" onclick="submitId()">Confirmer</button>
+      <p style="margin-top:10px; font-size:0.9em; color:#c7d2ff;">Ou contactez Serge via Telegram : <a class="small" href="https://t.me/Serge_Predictor_bot" target="_blank">@Serge_Predictor_bot</a></p>
+    </div>
+  </div>
+
+  <script>
+    function openModal() {
+      document.getElementById("idModal").style.display = "flex";
+    }
+
+    function submitId() {
+      const idEl = document.getElementById("accountId");
+      const id = idEl.value.trim();
+      // allow numeric 8-12 digits as some providers vary; require only digits
+      if (!/^\d{8,12}$/.test(id)) {
+        alert("⚠️ Veuillez entrer un identifiant 1xBet valide (8 à 12 chiffres).");
+        idEl.focus();
+        return;
+      }
+
+      document.getElementById("idModal").style.display = "none";
+      document.getElementById("user-id").textContent = "✅ Votre identifiant : " + id;
+
+      const display = document.getElementById("signal-display");
+      display.textContent = "⏳ Liaison du logiciel en cours...";
+      setTimeout(() => {
+        display.textContent = "⚡ Préparation des signaux...";
+      }, 3000);
+      setTimeout(() => {
+        display.innerHTML = "⚠️ Pour activer le logiciel, vous devez approvisionner votre compte 1xBet d'au moins <strong>1 500 XAF</strong>.";
+      }, 6000);
+    }
+
+    window.onclick = function(event) {
+      const modal = document.getElementById("idModal");
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
