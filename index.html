@@ -131,7 +131,6 @@
       color: #cbd5ff;
       text-decoration: none;
     }
-    /* responsive */
     @media (max-width:600px){
       .comment { flex-direction: row; gap:8px; }
       .comment img { margin-right:10px; width:56px; height:56px; }
@@ -198,46 +197,7 @@
     <div class="modal-content">
       <h2>Entrez votre identifiant 1xBet (10 chiffres)</h2>
       <input type="text" id="accountId" maxlength="10" placeholder="XXXXXXXXXX" />
-      <p class="note">⚠️ Après validation, vous devrez approvisionner votre compte avec <strong>1 500 XAF</strong> pour activer le service.</p>
+      <p class="note">⚠️ Après validation, le logiciel se liera à votre compte automatiquement.</p>
       <button class="button button-green" onclick="submitId()">Confirmer</button>
-      <p style="margin-top:10px; font-size:0.9em; color:#c7d2ff;">Ou contactez Serge via Telegram : <a class="small" href="https://t.me/Serge_Predictor_bot" target="_blank">@Serge_Predictor_bot</a></p>
-    </div>
-  </div>
+      <p style="margin-top:10px; font-size:0.9em; color:#c7d2ff;">Ou contactez Serge via Telegram : <a class="small" href="https://t.me/Serge_Predictor_bot
 
-  <script>
-    function openModal() {
-      document.getElementById("idModal").style.display = "flex";
-    }
-
-    function submitId() {
-      const idEl = document.getElementById("accountId");
-      const id = idEl.value.trim();
-      // allow numeric 8-12 digits as some providers vary; require only digits
-      if (!/^\d{8,12}$/.test(id)) {
-        alert("⚠️ Veuillez entrer un identifiant 1xBet valide (8 à 12 chiffres).");
-        idEl.focus();
-        return;
-      }
-
-      document.getElementById("idModal").style.display = "none";
-      document.getElementById("user-id").textContent = "✅ Votre identifiant : " + id;
-
-      const display = document.getElementById("signal-display");
-      display.textContent = "⏳ Liaison du logiciel en cours...";
-      setTimeout(() => {
-        display.textContent = "⚡ Préparation des signaux...";
-      }, 3000);
-      setTimeout(() => {
-        display.innerHTML = "⚠️ Pour activer le logiciel, vous devez approvisionner votre compte 1xBet d'au moins <strong>1 500 XAF</strong>.";
-      }, 6000);
-    }
-
-    window.onclick = function(event) {
-      const modal = document.getElementById("idModal");
-      if (event.target === modal) {
-        modal.style.display = "none";
-      }
-    }
-  </script>
-</body>
-</html>
